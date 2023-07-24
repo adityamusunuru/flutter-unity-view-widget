@@ -117,9 +117,9 @@ class _UnityWidgetState extends State<UnityWidget> {
 
     return WebUnityWidgetView(
       unitySrcUrl: widget.webUrl ?? '',
-      onWebViewCreated: (_) {
-        _onPlatformViewCreated();
-      },
+      // onWebViewCreated: (_) {
+      //   _onPlatformViewCreated();
+      // },
       unityOptions: unityOptions,
     );
   }
