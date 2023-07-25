@@ -2,14 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_unity_widget/flutter_unity_widget.dart';
 
 class LoaderScreen extends StatefulWidget {
-  LoaderScreen({Key key}) : super(key: key);
 
   @override
   _LoaderScreenState createState() => _LoaderScreenState();
 }
 
 class _LoaderScreenState extends State<LoaderScreen> {
-  UnityWidgetController _unityWidgetController;
+  late UnityWidgetController _unityWidgetController;
   double _sliderValue = 0.0;
 
   @override

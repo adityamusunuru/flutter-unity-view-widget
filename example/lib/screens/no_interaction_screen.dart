@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_unity_widget/flutter_unity_widget.dart';
 
 class NoInteractionScreen extends StatefulWidget {
-  NoInteractionScreen({Key key}) : super(key: key);
 
   @override
   _NoInteractionScreenState createState() => _NoInteractionScreenState();
@@ -12,7 +11,7 @@ class _NoInteractionScreenState extends State<NoInteractionScreen> {
   static final GlobalKey<ScaffoldState> _scaffoldKey =
       GlobalKey<ScaffoldState>();
 
-  UnityWidgetController _unityWidgetController;
+  late UnityWidgetController _unityWidgetController;
 
   @override
   void initState() {
@@ -63,9 +62,9 @@ class _NoInteractionScreenState extends State<NoInteractionScreen> {
     print('Received message from unity: ${message.toString()}');
   }
 
-  void onUnitySceneLoaded(SceneLoaded scene) {
-    print('Received scene loaded from unity: ${scene.name}');
-    print('Received scene loaded from unity buildIndex: ${scene.buildIndex}');
+  void onUnitySceneLoaded(SceneLoaded? scene) {
+    print('Received scene loaded from unity: ${scene?.name}');
+    print('Received scene loaded from unity buildIndex: ${scene?.buildIndex}');
   }
 
   // Callback that connects the created controller to the unity controller

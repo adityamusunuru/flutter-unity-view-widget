@@ -3,14 +3,13 @@ import 'package:flutter/services.dart';
 import 'package:flutter_unity_widget/flutter_unity_widget.dart';
 
 class OrientationScreen extends StatefulWidget {
-  OrientationScreen({Key key}) : super(key: key);
 
   @override
   _LoaderScreenState createState() => _LoaderScreenState();
 }
 
 class _LoaderScreenState extends State<OrientationScreen> {
-  UnityWidgetController _unityWidgetController;
+  late UnityWidgetController _unityWidgetController;
   double _sliderValue = 0.0;
 
   @override
